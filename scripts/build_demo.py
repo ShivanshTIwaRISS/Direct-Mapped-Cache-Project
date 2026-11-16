@@ -65,7 +65,8 @@ def main():
     add(slide("Team members and enrollment numbers", [
         f"{i + 1}. {member['name']}  |  {member['enrollment_number']}"
         for i, member in enumerate(team["members"])
-    ] + ["", "Clearly introduce all five group members in the final recording."],
+    ] + ["", f"Department: {team['department']}", f"University: {team['college']}", "",
+         "Clearly introduce all five group members in the final recording."],
         footer="All five names and enrollment numbers are confirmed. Record the final presentation with clear team introductions."), 22)
     add(slide("Addressing, storage and lookup", picture="docs/diagrams/architecture.png",
               footer="Tag = address[31:10]; index = address[9:4]; offset = address[3:0]. A hit requires valid AND matching tag."), 22)
@@ -114,8 +115,8 @@ def main():
     add(slide("Phase I progress and final team actions", [
         "Ready: RTL, verification, traces, AMAT and synthesis evidence.",
         "Ready: IEEE report, diagrams, demo script and this draft video.", "",
-        "Ready: all five names and enrollment numbers confirmed.",
-        "Pending: department, college and course details.",
+        "Ready: all five identities, department and university confirmed.",
+        "Pending: course title.",
         "Pending: each member's real contribution and Git history.",
         "Pending: team recording, accessible hosted URL, submission form.", "",
         "github.com/samarth-khera/Direct-Mapped-Cache-Project",

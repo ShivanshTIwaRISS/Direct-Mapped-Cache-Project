@@ -6,6 +6,10 @@ This optional template assigns a speaking section to each member. Rehearse once.
 Show actual simulator execution as well as diagrams and results. The optional
 generated MP4 is a captioned rehearsal walkthrough, not a team recording.
 
+**Department:** Computer Science and AI
+
+**College / university:** Rishihood University
+
 | Team member | Enrollment number |
 | --- | --- |
 | Navprabhat Singh | 2401010293 |
@@ -60,5 +64,5 @@ On screen: Show docs/diagrams/results.png, results/summary.csv and synthesis evi
 4. Keep the export at or below 300 seconds; aim for 270 seconds.
 5. Upload the recording, verify viewer access, and replace the pending URL in
    `docs/demo/video_link.md`. Commit this change with the real contributor's identity.
-6. Rebuild the report after updating institution details and contribution evidence.
+6. Rebuild the report after updating the course title or contribution evidence.
 7. Submit the existing GitHub repository URL through the instructor's form.

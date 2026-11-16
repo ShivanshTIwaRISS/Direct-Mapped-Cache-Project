@@ -25,7 +25,13 @@ present in that commit.
 
 These user-confirmed details are stored in `team.json` and included in the
 report, contribution records and demo materials. Department, college and course
-details have not been supplied.
+details are tracked separately below.
+
+**Department:** Computer Science and AI
+
+**College / university:** Rishihood University
+
+The department and university are confirmed. The course title remains pending.
 
 ## Rubric checklist
 
@@ -40,6 +46,7 @@ details have not been supplied.
 | Video maximum five minutes | Draft implemented | 210-second captioned MP4 and a 270-second team recording script |
 | Video explains idea | Implemented in draft and script | Goal, configuration, locality and AMAT |
 | Team names and enrollment numbers | Complete | All five confirmed pairs appear in `team.json`, README, report and demo materials |
+| Department and university | Complete | Computer Science and AI, Rishihood University |
 | Video introduces all five members | Names ready; final recording pending | Confirmed roster is on the draft video team card; record the spoken introductions |
 | Video shows working/progress | Draft implemented; final recording pending | Actual simulator output, trace walkthrough, VCD, charts and synthesis evidence |
 | Repository contains report | Published; team details updated | LaTeX, compiled PDF and generated tables |
@@ -48,7 +55,7 @@ details have not been supplied.
 | Relevant artifacts | Implemented | Figures, CSV/JSON/log evidence and draft video |
 | Genuine version history | Preserved | Original commit retained; assisted work uses the configured author |
 | Five meaningful individual contributions | Further evidence pending | Existing commits identify Samarth Khera and Pratham Malhotra; further completed work and personal commit evidence remain pending |
-| Repository link submitted through form | Pending | Institution details and final form submission required |
+| Repository link submitted through form | Pending | Course title and final form submission required |
 
 ## Verification evidence
 
@@ -76,8 +83,8 @@ See `results/phase1_checks.json`, `results/artifact_sha256.json`,
 
 ## Finish the submission
 
-1. The five names and enrollment numbers in `team.json` are confirmed. Add the
-   remaining department, college and course details.
+1. The five names, enrollment numbers, department and university in `team.json`
+   are confirmed. Add the remaining course title.
 2. Each person must do and understand a substantive contribution. Update the
    contribution descriptions and add `contribution_commits` arrays with their
    actual commit hashes. A person must review meaningful work and authorship.

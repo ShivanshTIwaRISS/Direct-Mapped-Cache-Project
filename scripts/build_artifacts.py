@@ -243,6 +243,7 @@ Show actual simulator execution as well as diagrams and results. The optional
 generated MP4 is a captioned rehearsal walkthrough, not a team recording.
 
 """
+    script += f"**Department:** {team['department']}\n\n**College / university:** {team['college']}\n\n"
     script += "| Team member | Enrollment number |\n| --- | --- |\n"
     script += "".join(f"| {m['name']} | {m['enrollment_number']} |\n" for m in members)
     script += "\nOpening introductions (keep enrollment numbers visible on the title card):\n\n"
@@ -294,7 +295,7 @@ generated MP4 is a captioned rehearsal walkthrough, not a team recording.
 4. Keep the export at or below 300 seconds; aim for 270 seconds.
 5. Upload the recording, verify viewer access, and replace the pending URL in
    `docs/demo/video_link.md`. Commit this change with the real contributor's identity.
-6. Rebuild the report after updating institution details and contribution evidence.
+6. Rebuild the report after updating the course title or contribution evidence.
 7. Submit the existing GitHub repository URL through the instructor's form.
 """
     (ROOT / "docs/demo/script.md").write_text(script)

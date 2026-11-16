@@ -28,13 +28,13 @@
     }
   ],
   "team_details_confirmed": true,
+  "department": "Computer Science and AI",
+  "college": "Rishihood University",
   "submission_ready": false,
   "pending": [
     "Navprabhat Singh: completed contribution and real commit evidence",
     "Shivansh Tiwari: completed contribution and real commit evidence",
     "Tattva Rajput: completed contribution and real commit evidence",
-    "Confirmed college",
-    "Confirmed department",
     "Confirmed course",
     "Final hosted video with all five introductions",
     "Human review of five meaningful contributions and authorship",

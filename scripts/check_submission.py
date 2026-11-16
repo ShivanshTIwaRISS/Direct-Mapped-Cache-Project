@@ -102,6 +102,11 @@ def main():
     enrollments = [member["enrollment_number"] for member in team["members"]]
     require(len(set(enrollments)) == 5 and all(re.fullmatch(r"\d{10}", value) for value in enrollments),
             "Five unique 10-digit enrollment numbers are required")
+    for document in ("README.md", "docs/contributions.md", "docs/phase1_audit.md",
+                     "docs/demo/script.md", "docs/report/generated_team.tex"):
+        content = (ROOT / document).read_text()
+        require(team["department"] in content and team["college"] in content,
+                "Missing department or university in " + document)
     for document in ("README.md", "docs/contributions.md", "docs/demo/script.md",
                      "docs/report/generated_team.tex", "docs/report/generated_contributions.tex"):
         content = (ROOT / document).read_text()
@@ -138,6 +143,7 @@ def main():
                 "team_members": [{"name": m["name"], "enrollment_number": m["enrollment_number"]}
                                  for m in team["members"]],
                 "team_details_confirmed": all(m.get("confirmed") for m in team["members"]),
+                "department": team["department"], "college": team["college"],
                 "submission_ready": not pending, "pending": pending}
     (ROOT / "results/phase1_checks.json").write_text(json.dumps(evidence, indent=2) + "\n")
     # The hash manifest excludes itself and the check-status output.

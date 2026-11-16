@@ -6,7 +6,7 @@ checked hit/miss statistics. This continues Samarth Khera's original decoder and
 commit without rewriting its history.
 
 **Submission status:** the technical package is implemented and verified.
-All five names and enrollment numbers are confirmed below. Institution details,
+All five names, enrollment numbers, department and university are confirmed below. Course details,
 completed individual contribution records, the final recording and its hosted
 URL are still required. See the detailed
 [Phase I audit](docs/phase1_audit.md). A draft video does not replace the required
@@ -49,7 +49,7 @@ Tectonic separately or compile the LaTeX report with a full TeX installation.
 | `make report` | Regenerates figures, measured tables, team fields, analysis, recording script and IEEE PDF; run simulation and synthesis first |
 | `make demo` | Generates the captioned 210-second rehearsal video from actual result files and figures |
 | `make check` | Runs simulation, synthesis, stress/netlist checks, report, video and package validation in order |
-| `make submission-check` | Strict readiness check; flags pending institution details, contribution evidence and final video/submission requirements |
+| `make submission-check` | Strict readiness check; flags pending course details, contribution evidence and final video/submission requirements |
 
 Generated waveforms, binaries and synthesized netlists are under `build/` and
 are not committed. Small measured CSV/JSON/log files, diagrams, PDF and draft
@@ -98,6 +98,10 @@ evidence; they are not exhaustive formal verification.
 
 ## Team and submission
 
+**Department:** Computer Science and AI
+
+**College / university:** Rishihood University
+
 | Team member | Enrollment number |
 | --- | --- |
 | Navprabhat Singh | 2401010293 |
@@ -107,7 +111,8 @@ evidence; they are not exhaustive formal verification.
 | Tattva Rajput | 2401010478 |
 
 The confirmed roster is maintained in `team.json` and appears in the report and
-demo materials. Department, college and course details remain pending. Record
+demo materials. The department is Computer Science and AI at Rishihood University;
+the course title remains pending. Record
 completed individual contributions with actual commit evidence, then rebuild
 the report. Proposed roles are not completed contribution credits.
 

@@ -1,5 +1,9 @@
 # Contributions and Git history
 
+**Department:** Computer Science and AI
+
+**College / university:** Rishihood University
+
 The repository originally had one remote commit, `f6fbe40`, authored by
 `samarth-khera`, with the decoder, initial three-state FSM and README. It has
 been preserved. At the initial audit, the README listed only the first names of
