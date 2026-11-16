@@ -5,18 +5,34 @@
   "stress_reads_per_design": 4096,
   "synthesized_outputs_match": true,
   "draft_video_seconds": 210.0,
+  "team_members": [
+    {
+      "name": "Navprabhat Singh",
+      "enrollment_number": "2401010293"
+    },
+    {
+      "name": "Samarth Khera",
+      "enrollment_number": "2401010407"
+    },
+    {
+      "name": "Pratham Malhotra",
+      "enrollment_number": "2401010343"
+    },
+    {
+      "name": "Shivansh Tiwari",
+      "enrollment_number": "2401020108"
+    },
+    {
+      "name": "Tattva Rajput",
+      "enrollment_number": "2401010478"
+    }
+  ],
+  "team_details_confirmed": true,
   "submission_ready": false,
   "pending": [
-    "Member 1: confirmed full name and roll number",
-    "Member 1: completed contribution and real commit evidence",
-    "Member 2: confirmed full name and roll number",
-    "Member 2: completed contribution and real commit evidence",
-    "Member 3: confirmed full name and roll number",
-    "Member 3: completed contribution and real commit evidence",
-    "Member 4: confirmed full name and roll number",
-    "Member 4: completed contribution and real commit evidence",
-    "Member 5: confirmed full name and roll number",
-    "Member 5: completed contribution and real commit evidence",
+    "Navprabhat Singh: completed contribution and real commit evidence",
+    "Shivansh Tiwari: completed contribution and real commit evidence",
+    "Tattva Rajput: completed contribution and real commit evidence",
     "Confirmed college",
     "Confirmed department",
     "Confirmed course",
