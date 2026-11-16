@@ -22,7 +22,7 @@ def main():
     parser.add_argument("--strict", action="store_true")
     args = parser.parse_args()
     required = [
-        "README.md", "Makefile", "addr_decoder.v", "cache_fsm.v",
+        "README.md", "Makefile", ".gitignore", ".gitattributes", "addr_decoder.v", "cache_fsm.v",
         "rtl/cache_controller.v", "rtl/cache_data_ram.v", "rtl/tag_ram.v",
         "rtl/valid_bit_ram.v", "rtl/tag_comparator.v", "tb/cache_controller_tb.sv",
         "tb/main_memory_model.v", "docs/architecture.md", "docs/results_analysis.md",

@@ -1,0 +1,5 @@
+# Preserve whitespace in generated tool output; inspect it as evidence.
+docs/diagrams/*.svg -whitespace
+results/*.log -whitespace
+results/*.csv -whitespace
+results/synthesis*.json -whitespace
