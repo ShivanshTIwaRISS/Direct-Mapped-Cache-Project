@@ -1,6 +1,6 @@
 # Prototype video
 
-Final recording URL: **PENDING — record the team presentation and paste its viewable URL here.**
+Final recording URL: https://drive.google.com/drive/folders/1rIy2lJdpMUVboZ0P00hCmf8vu-b3YTjB?usp=sharing
 
 The generated `phase1_prototype_draft.mp4` is a reproducible visual prototype
 walkthrough using actual RTL results. It is a rehearsal asset with on-screen

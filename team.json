@@ -4,7 +4,7 @@
   "course": "COURSE NAME PENDING",
   "submission_review": {
     "contributions_verified": false,
-    "video_access_verified": false,
+    "video_access_verified": true,
     "form_submitted": false
   },
   "members": [

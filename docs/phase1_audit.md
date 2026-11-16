@@ -50,7 +50,7 @@ The department and university are confirmed. The course title remains pending.
 | Video introduces all five members | Names ready; final recording pending | Confirmed roster is on the draft video team card; record the spoken introductions |
 | Video shows working/progress | Draft implemented; final recording pending | Actual simulator output, trace walkthrough, VCD, charts and synthesis evidence |
 | Repository contains report | Published; team details updated | LaTeX, compiled PDF and generated tables |
-| Repository contains final video link | Pending | `docs/demo/video_link.md` explicitly marks the final hosted URL pending |
+| Repository contains final video link | Implemented | Google Drive recording link added in `docs/demo/video_link.md` and README |
 | Repository contains prototype files | Published | RTL, testbench, memory endpoint, scripts, traces and Makefile |
 | Relevant artifacts | Implemented | Figures, CSV/JSON/log evidence and draft video |
 | Genuine version history | Preserved | Original commit retained; assisted work uses the configured author |

@@ -16,7 +16,7 @@ team introductions.
 | --- | --- |
 | IEEE report: abstract, literature review, proposed solution, contributions, references | [PDF](docs/report/phase1_report.pdf) · [editable LaTeX](docs/report/phase1_report.tex) |
 | Prototype and block diagrams | [Cache RTL](rtl/) · [FSM](cache_fsm.v) · [decoder](addr_decoder.v) · [architecture](docs/architecture.md) |
-| Prototype video, maximum five minutes | [3:30 draft MP4](docs/demo/phase1_prototype_draft.mp4) · [final video link: pending](docs/demo/video_link.md) |
+| Prototype video, maximum five minutes | [3:30 draft MP4](docs/demo/phase1_prototype_draft.mp4) · [Final recording (Google Drive)](https://drive.google.com/drive/folders/1rIy2lJdpMUVboZ0P00hCmf8vu-b3YTjB?usp=sharing) · [video link](docs/demo/video_link.md) |
 | Trace, hit/miss report and AMAT | [Traces](traces/) · [measured results](results/summary.csv) · [analysis](docs/results_analysis.md) |
 | Synthesis evidence | [Log](results/synthesis.log) · [generic cell statistics](results/synthesis_cells.json) |
 | Individual contributions | [Evidence and proposed responsibilities](docs/contributions.md) · [editable team details](team.json) |
