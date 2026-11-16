@@ -1,0 +1,4 @@
+rtl: PASS trace=build/stress.trace accesses=4096 hits=2560 misses=1536 checks=4238 memory_latency=5
+tb/cache_controller_tb.sv:151: $finish called at 274840000 (1ps)
+synthesized: PASS trace=build/stress.trace accesses=4096 hits=2560 misses=1536 checks=4238 memory_latency=5
+tb/cache_controller_tb.sv:151: $finish called at 274840000 (1ps)

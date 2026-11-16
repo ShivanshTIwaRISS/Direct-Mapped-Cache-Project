@@ -1,0 +1,67 @@
+[
+  {
+    "trace": "demo",
+    "accesses": 12,
+    "hits": 7,
+    "misses": 5,
+    "hit_ratio": 0.5833333333333334,
+    "miss_ratio": 0.4166666666666667,
+    "hit_cycles": 1,
+    "miss_cycles": 7,
+    "miss_penalty_cycles": 6,
+    "amat_cycles": 3.5,
+    "measured_mean_cycles": 3.5
+  },
+  {
+    "trace": "sequential",
+    "accesses": 1024,
+    "hits": 768,
+    "misses": 256,
+    "hit_ratio": 0.75,
+    "miss_ratio": 0.25,
+    "hit_cycles": 1,
+    "miss_cycles": 7,
+    "miss_penalty_cycles": 6,
+    "amat_cycles": 2.5,
+    "measured_mean_cycles": 2.5
+  },
+  {
+    "trace": "repeated",
+    "accesses": 1024,
+    "hits": 1008,
+    "misses": 16,
+    "hit_ratio": 0.984375,
+    "miss_ratio": 0.015625,
+    "hit_cycles": 1,
+    "miss_cycles": 7,
+    "miss_penalty_cycles": 6,
+    "amat_cycles": 1.09375,
+    "measured_mean_cycles": 1.09375
+  },
+  {
+    "trace": "random",
+    "accesses": 1024,
+    "hits": 233,
+    "misses": 791,
+    "hit_ratio": 0.2275390625,
+    "miss_ratio": 0.7724609375,
+    "hit_cycles": 1,
+    "miss_cycles": 7,
+    "miss_penalty_cycles": 6,
+    "amat_cycles": 5.634765625,
+    "measured_mean_cycles": 5.634765625
+  },
+  {
+    "trace": "conflict",
+    "accesses": 1024,
+    "hits": 0,
+    "misses": 1024,
+    "hit_ratio": 0.0,
+    "miss_ratio": 1.0,
+    "hit_cycles": 1,
+    "miss_cycles": 7,
+    "miss_penalty_cycles": 6,
+    "amat_cycles": 7.0,
+    "measured_mean_cycles": 7.0
+  }
+]

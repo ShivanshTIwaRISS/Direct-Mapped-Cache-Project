@@ -1,0 +1,12 @@
+read_verilog addr_decoder.v cache_fsm.v rtl/cache_data_ram.v rtl/cache_controller.v rtl/tag_ram.v rtl/valid_bit_ram.v rtl/tag_comparator.v
+hierarchy -check -top cache_controller
+proc
+opt
+check -assert
+memory -nomap
+tee -o results/synthesis_memory.json stat -json
+synth -top cache_controller
+check -assert
+tee -o results/synthesis_cells.json stat -json
+write_json build/cache_netlist.json
+write_verilog -noattr build/cache_synth.v

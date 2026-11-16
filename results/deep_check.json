@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "seed": 2026,
+  "stress_accesses_per_design": 4096,
+  "designs_checked": [
+    "rtl",
+    "synthesized"
+  ],
+  "outputs_identical": true,
+  "directed_checks_per_design": 142,
+  "scope": "trace equivalence, not a formal proof"
+}

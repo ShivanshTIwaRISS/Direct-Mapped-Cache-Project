@@ -1,0 +1,6 @@
+trace,accesses,hits,misses,hit_ratio,miss_ratio,hit_cycles,miss_cycles,miss_penalty_cycles,amat_cycles,measured_mean_cycles
+demo,12,7,5,0.5833333333333334,0.4166666666666667,1,7,6,3.5,3.5
+sequential,1024,768,256,0.75,0.25,1,7,6,2.5,2.5
+repeated,1024,1008,16,0.984375,0.015625,1,7,6,1.09375,1.09375
+random,1024,233,791,0.2275390625,0.7724609375,1,7,6,5.634765625,5.634765625
+conflict,1024,0,1024,0.0,1.0,1,7,6,7.0,7.0

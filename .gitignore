@@ -1,0 +1,13 @@
+.DS_Store
+build/
+.tools/
+__pycache__/
+*.vcd
+*.fst
+*.aux
+*.log
+!results/*.log
+*.synctex.gz
+*.mp4
+!docs/demo/phase1_prototype_draft.mp4
+

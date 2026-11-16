@@ -1,0 +1,26 @@
+name: Verify cache prototype
+on: [push, pull_request]
+jobs:
+  rtl-and-synthesis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install RTL tools
+        run: sudo apt-get update && sudo apt-get install -y iverilog yosys
+      - name: Simulate and compare with reference model
+        run: make sim
+      - name: Generic synthesis and structural check
+        run: make synth
+      - name: Full-address stress and synthesized-netlist regression
+        run: make deepcheck
+      - name: Preserve evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-rtl-evidence
+          path: |
+            results/
+            build/cache_demo.vcd
+            build/cache_netlist.json

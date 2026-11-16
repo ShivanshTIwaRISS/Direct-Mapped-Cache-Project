@@ -1,0 +1,3 @@
+# Only needed for report figures and the draft video; RTL scripts use the stdlib.
+matplotlib>=3.9,<4
+Pillow>=10,<13

@@ -1,0 +1,193 @@
+{
+   "creator": "Yosys 0.70+post (git sha1 0c11ea098be065e585a90a06e7b7da49936cf231, Release, AppleClang clang++ 21.0.0.21000334)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\tag_comparator": {
+         "num_wires":         5,
+         "num_wire_bits":     47,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 46,
+         "num_ports":         4,
+         "num_port_bits":     46,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$eq": 1,
+            "$logic_and": 1
+         }
+      },
+      "\\valid_bit_ram": {
+         "num_wires":         11,
+         "num_wire_bits":     337,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 74,
+         "num_ports":         5,
+         "num_port_bits":     10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         7,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$adffe": 1,
+            "$and": 1,
+            "$neg": 1,
+            "$not": 1,
+            "$or": 1,
+            "$shift": 1,
+            "$shiftx": 1
+         }
+      },
+      "\\tag_ram": {
+         "num_wires":         8,
+         "num_wire_bits":     102,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 52,
+         "num_ports":         5,
+         "num_port_bits":     52,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$mem_v2": 1,
+            "$mux": 3
+         }
+      },
+      "\\cache_controller": {
+         "num_wires":         48,
+         "num_wire_bits":     691,
+         "num_pub_wires":     30,
+         "num_pub_wire_bits": 456,
+         "num_ports":         19,
+         "num_port_bits":     333,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         26,
+         "num_submodules":       6,
+         "num_cells_by_type": {
+            "$add": 3,
+            "$adffe": 6,
+            "$logic_and": 2,
+            "$logic_not": 1,
+            "$logic_or": 1,
+            "$mux": 4,
+            "$not": 2,
+            "$reduce_and": 3,
+            "$reduce_bool": 2,
+            "$reduce_or": 1,
+            "$shiftx": 1,
+            "addr_decoder": 1,
+            "cache_data_ram": 1,
+            "cache_fsm": 1,
+            "tag_comparator": 1,
+            "tag_ram": 1,
+            "valid_bit_ram": 1
+         }
+      },
+      "\\cache_data_ram": {
+         "num_wires":         10,
+         "num_wire_bits":     560,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 170,
+         "num_ports":         6,
+         "num_port_bits":     170,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$mem_v2": 1,
+            "$mux": 3,
+            "$shiftx": 1
+         }
+      },
+      "\\cache_fsm": {
+         "num_wires":         31,
+         "num_wire_bits":     38,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 18,
+         "num_ports":         13,
+         "num_port_bits":     14,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         24,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$adffe": 1,
+            "$eq": 3,
+            "$logic_and": 6,
+            "$logic_not": 3,
+            "$mux": 4,
+            "$ne": 3,
+            "$pmux": 2,
+            "$reduce_and": 1,
+            "$reduce_or": 1
+         }
+      },
+      "\\addr_decoder": {
+         "num_wires":         4,
+         "num_wire_bits":     64,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 64,
+         "num_ports":         4,
+         "num_port_bits":     64,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+
+         }
+      }
+   },
+      "design": {
+         "num_wires":         117,
+         "num_wire_bits":     1839,
+         "num_pub_wires":     70,
+         "num_pub_wire_bits": 880,
+         "num_ports":         56,
+         "num_port_bits":     689,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         68,
+         "num_submodules":       6,
+         "num_cells_by_type": {
+            "$add": 3,
+            "$adffe": 8,
+            "$and": 1,
+            "$eq": 4,
+            "$logic_and": 9,
+            "$logic_not": 4,
+            "$logic_or": 1,
+            "$mem_v2": 2,
+            "$mux": 14,
+            "$ne": 3,
+            "$neg": 1,
+            "$not": 3,
+            "$or": 1,
+            "$pmux": 2,
+            "$reduce_and": 4,
+            "$reduce_bool": 2,
+            "$reduce_or": 2,
+            "$shift": 1,
+            "$shiftx": 3,
+            "addr_decoder": 1,
+            "cache_data_ram": 1,
+            "cache_fsm": 1,
+            "tag_comparator": 1,
+            "tag_ram": 1,
+            "valid_bit_ram": 1
+         }
+      }
+}
+

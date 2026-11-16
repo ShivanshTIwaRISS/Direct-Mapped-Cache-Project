@@ -1,0 +1,27 @@
+{
+  "demo": {
+    "accesses": 12,
+    "hits": 7,
+    "misses": 5
+  },
+  "sequential": {
+    "accesses": 1024,
+    "hits": 768,
+    "misses": 256
+  },
+  "repeated": {
+    "accesses": 1024,
+    "hits": 1008,
+    "misses": 16
+  },
+  "random": {
+    "accesses": 1024,
+    "hits": 233,
+    "misses": 791
+  },
+  "conflict": {
+    "accesses": 1024,
+    "hits": 0,
+    "misses": 1024
+  }
+}

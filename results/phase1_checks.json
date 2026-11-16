@@ -1,0 +1,28 @@
+{
+  "technical_package": "PASS",
+  "regression_runs": 15,
+  "workload_reads": 12324,
+  "stress_reads_per_design": 4096,
+  "synthesized_outputs_match": true,
+  "draft_video_seconds": 210.0,
+  "submission_ready": false,
+  "pending": [
+    "Member 1: confirmed full name and roll number",
+    "Member 1: completed contribution and real commit evidence",
+    "Member 2: confirmed full name and roll number",
+    "Member 2: completed contribution and real commit evidence",
+    "Member 3: confirmed full name and roll number",
+    "Member 3: completed contribution and real commit evidence",
+    "Member 4: confirmed full name and roll number",
+    "Member 4: completed contribution and real commit evidence",
+    "Member 5: confirmed full name and roll number",
+    "Member 5: completed contribution and real commit evidence",
+    "Confirmed college",
+    "Confirmed department",
+    "Confirmed course",
+    "Final hosted video with all five introductions",
+    "Human review of five meaningful contributions and authorship",
+    "Final video reviewed for introductions, duration and evaluator access",
+    "Submission through the instructor's form"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "python": "3.13.5",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "iverilog": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "regression_runs": 15,
+  "memory_latencies": [
+    1,
+    5,
+    9
+  ]
+}

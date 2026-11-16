@@ -1,0 +1,17 @@
+{
+  "college": "COLLEGE NAME PENDING",
+  "department": "DEPARTMENT NAME PENDING",
+  "course": "COURSE NAME PENDING",
+  "submission_review": {
+    "contributions_verified": false,
+    "video_access_verified": false,
+    "form_submitted": false
+  },
+  "members": [
+    {"name": "Samarth (full name pending)", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Address decoder and controller FSM", "verified_contribution": "Original addr_decoder.v and cache_fsm.v in commit f6fbe40; subsequent integration is assisted work."},
+    {"name": "Tattva (full name pending)", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Data, tag and valid storage review", "verified_contribution": "Listed in original README; individual implementation contribution not yet evidenced."},
+    {"name": "MEMBER 3 NAME PENDING", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Integration and memory protocol review", "verified_contribution": "Pending a real member contribution."},
+    {"name": "MEMBER 4 NAME PENDING", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Testbench, trace and result validation", "verified_contribution": "Pending a real member contribution."},
+    {"name": "MEMBER 5 NAME PENDING", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Report, video and reproducibility review", "verified_contribution": "Pending a real member contribution."}
+  ]
+}

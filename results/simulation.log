@@ -1,0 +1,31 @@
+PASS trace=traces/demo.trace accesses=12 hits=7 misses=5 checks=154 memory_latency=1
+tb/cache_controller_tb.sv:151: $finish called at 9260000 (1ps)
+PASS trace=traces/sequential.trace accesses=1024 hits=768 misses=256 checks=1166 memory_latency=1
+tb/cache_controller_tb.sv:151: $finish called at 55960000 (1ps)
+PASS trace=traces/repeated.trace accesses=1024 hits=1008 misses=16 checks=1166 memory_latency=1
+tb/cache_controller_tb.sv:151: $finish called at 51160000 (1ps)
+PASS trace=traces/random.trace accesses=1024 hits=233 misses=791 checks=1166 memory_latency=1
+tb/cache_controller_tb.sv:151: $finish called at 66660000 (1ps)
+PASS trace=traces/conflict.trace accesses=1024 hits=0 misses=1024 checks=1166 memory_latency=1
+tb/cache_controller_tb.sv:151: $finish called at 71320000 (1ps)
+VCD info: dumpfile build/cache_demo.vcd opened for output.
+PASS trace=traces/demo.trace accesses=12 hits=7 misses=5 checks=154 memory_latency=5
+tb/cache_controller_tb.sv:151: $finish called at 14820000 (1ps)
+PASS trace=traces/sequential.trace accesses=1024 hits=768 misses=256 checks=1166 memory_latency=5
+tb/cache_controller_tb.sv:151: $finish called at 71560000 (1ps)
+PASS trace=traces/repeated.trace accesses=1024 hits=1008 misses=16 checks=1166 memory_latency=5
+tb/cache_controller_tb.sv:151: $finish called at 57160000 (1ps)
+PASS trace=traces/random.trace accesses=1024 hits=233 misses=791 checks=1166 memory_latency=5
+tb/cache_controller_tb.sv:151: $finish called at 103660000 (1ps)
+PASS trace=traces/conflict.trace accesses=1024 hits=0 misses=1024 checks=1166 memory_latency=5
+tb/cache_controller_tb.sv:151: $finish called at 117640000 (1ps)
+PASS trace=traces/demo.trace accesses=12 hits=7 misses=5 checks=154 memory_latency=9
+tb/cache_controller_tb.sv:151: $finish called at 20380000 (1ps)
+PASS trace=traces/sequential.trace accesses=1024 hits=768 misses=256 checks=1166 memory_latency=9
+tb/cache_controller_tb.sv:151: $finish called at 87160000 (1ps)
+PASS trace=traces/repeated.trace accesses=1024 hits=1008 misses=16 checks=1166 memory_latency=9
+tb/cache_controller_tb.sv:151: $finish called at 63160000 (1ps)
+PASS trace=traces/random.trace accesses=1024 hits=233 misses=791 checks=1166 memory_latency=9
+tb/cache_controller_tb.sv:151: $finish called at 140660000 (1ps)
+PASS trace=traces/conflict.trace accesses=1024 hits=0 misses=1024 checks=1166 memory_latency=9
+tb/cache_controller_tb.sv:151: $finish called at 163960000 (1ps)
