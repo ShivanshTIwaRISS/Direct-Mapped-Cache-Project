@@ -8,10 +8,42 @@
     "form_submitted": false
   },
   "members": [
-    {"name": "Samarth (full name pending)", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Address decoder and controller FSM", "verified_contribution": "Original addr_decoder.v and cache_fsm.v in commit f6fbe40; subsequent integration is assisted work."},
-    {"name": "Tattva (full name pending)", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Data, tag and valid storage review", "verified_contribution": "Listed in original README; individual implementation contribution not yet evidenced."},
-    {"name": "MEMBER 3 NAME PENDING", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Integration and memory protocol review", "verified_contribution": "Pending a real member contribution."},
-    {"name": "MEMBER 4 NAME PENDING", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Testbench, trace and result validation", "verified_contribution": "Pending a real member contribution."},
-    {"name": "MEMBER 5 NAME PENDING", "roll_number": "PENDING", "confirmed": false, "proposed_role": "Report, video and reproducibility review", "verified_contribution": "Pending a real member contribution."}
+    {
+      "name": "Navprabhat Singh",
+      "enrollment_number": "2401010293",
+      "confirmed": true,
+      "proposed_role": "Report, video and reproducibility review",
+      "verified_contribution": "Individual completed work and commit evidence pending."
+    },
+    {
+      "name": "Samarth Khera",
+      "enrollment_number": "2401010407",
+      "confirmed": true,
+      "proposed_role": "Address decoder and controller FSM",
+      "verified_contribution": "Original addr_decoder.v and cache_fsm.v in commit f6fbe40; subsequent integration is assisted work.",
+      "contribution_commits": ["f6fbe40"]
+    },
+    {
+      "name": "Pratham Malhotra",
+      "enrollment_number": "2401010343",
+      "confirmed": true,
+      "proposed_role": "Integration and memory protocol review",
+      "verified_contribution": "Commits 193f6ed and 83031a7 record the integrated prototype, verification, report and repository metadata under Pratham Malhotra's configured Git identity; this work was prepared with AI assistance.",
+      "contribution_commits": ["193f6ed", "83031a7"]
+    },
+    {
+      "name": "Shivansh Tiwari",
+      "enrollment_number": "2401020108",
+      "confirmed": true,
+      "proposed_role": "Testbench, trace and result validation",
+      "verified_contribution": "Individual completed work and commit evidence pending."
+    },
+    {
+      "name": "Tattva Rajput",
+      "enrollment_number": "2401010478",
+      "confirmed": true,
+      "proposed_role": "Data, tag and valid storage review",
+      "verified_contribution": "Listed in the original README; individual implementation contribution not yet evidenced."
+    }
   ]
 }

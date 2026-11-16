@@ -8,10 +8,24 @@ evidence and remaining actions without assigning a score.
 
 The local branch initially had no commits or working files. GitHub had one
 commit, `f6fbe40`, with `addr_decoder.v`, a preliminary `cache_fsm.v` and a short
-README listing Samarth, Tattva and three name placeholders. That commit was
+README listing only the first names of Samarth Khera and Tattva Rajput, plus three name placeholders. That commit was
 fetched and checked out without rewriting its history. No report, testbench,
 cache storage, traces, measured statistics, synthesis evidence or video were
 present in that commit.
+
+## Confirmed team
+
+| Team member | Enrollment number |
+| --- | --- |
+| Navprabhat Singh | 2401010293 |
+| Samarth Khera | 2401010407 |
+| Pratham Malhotra | 2401010343 |
+| Shivansh Tiwari | 2401020108 |
+| Tattva Rajput | 2401010478 |
+
+These user-confirmed details are stored in `team.json` and included in the
+report, contribution records and demo materials. Department, college and course
+details have not been supplied.
 
 ## Rubric checklist
 
@@ -25,15 +39,16 @@ present in that commit.
 | References | Implemented | Five entries including original research and official tool sources |
 | Video maximum five minutes | Draft implemented | 210-second captioned MP4 and a 270-second team recording script |
 | Video explains idea | Implemented in draft and script | Goal, configuration, locality and AMAT |
-| Video introduces all five members | Pending | Confirmed full names and team introductions unavailable |
+| Team names and enrollment numbers | Complete | All five confirmed pairs appear in `team.json`, README, report and demo materials |
+| Video introduces all five members | Names ready; final recording pending | Confirmed roster is on the draft video team card; record the spoken introductions |
 | Video shows working/progress | Draft implemented; final recording pending | Actual simulator output, trace walkthrough, VCD, charts and synthesis evidence |
-| Repository contains report | Files prepared for GitHub | LaTeX, compiled PDF and generated tables |
+| Repository contains report | Published; team details updated | LaTeX, compiled PDF and generated tables |
 | Repository contains final video link | Pending | `docs/demo/video_link.md` explicitly marks the final hosted URL pending |
-| Repository contains prototype files | Files prepared for GitHub | RTL, testbench, memory endpoint, scripts, traces and Makefile |
+| Repository contains prototype files | Published | RTL, testbench, memory endpoint, scripts, traces and Makefile |
 | Relevant artifacts | Implemented | Figures, CSV/JSON/log evidence and draft video |
 | Genuine version history | Preserved | Original commit retained; assisted work uses the configured author |
-| Five meaningful individual contributions | Pending | Five-person work/commit evidence unavailable; it cannot be manufactured |
-| Repository link submitted through form | Pending | Accurate team details and final form submission required |
+| Five meaningful individual contributions | Further evidence pending | Existing commits identify Samarth Khera and Pratham Malhotra; further completed work and personal commit evidence remain pending |
+| Repository link submitted through form | Pending | Institution details and final form submission required |
 
 ## Verification evidence
 
@@ -50,7 +65,8 @@ present in that commit.
   the testbench and external memory model.
 - IEEEtran report compiles to PDF; figures include a real VCD plot.
 - Draft MP4: H.264, 1280x720, 210 seconds, captioned rehearsal material without
-  recorded team introductions and with pending identity labels.
+  recorded team introductions; all five confirmed names and enrollment numbers
+  appear on its team card.
 - `make check` rebuilds the technical package. `make submission-check` also
   enforces final identity, contribution and video readiness. Technical success
   is reported separately from the unfinished submission requirements.
@@ -60,8 +76,8 @@ See `results/phase1_checks.json`, `results/artifact_sha256.json`,
 
 ## Finish the submission
 
-1. Enter all five full names, roll numbers, department, college and course in
-   `team.json`; set confirmed details accurately.
+1. The five names and enrollment numbers in `team.json` are confirmed. Add the
+   remaining department, college and course details.
 2. Each person must do and understand a substantive contribution. Update the
    contribution descriptions and add `contribution_commits` arrays with their
    actual commit hashes. A person must review meaningful work and authorship.

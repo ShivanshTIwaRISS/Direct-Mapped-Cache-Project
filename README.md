@@ -2,12 +2,13 @@
 
 A working Phase I Verilog prototype for a **1 KiB direct-mapped read cache**,
 with 16-byte lines, 32-bit byte addresses, atomic refill and independently
-checked hit/miss statistics. This continues Samarth's original decoder and FSM
+checked hit/miss statistics. This continues Samarth Khera's original decoder and FSM
 commit without rewriting its history.
 
 **Submission status:** the technical package is implemented and verified.
-Confirmed team identities, completed individual contribution records, the final
-five-member recording and its hosted URL are still required. See the detailed
+All five names and enrollment numbers are confirmed below. Institution details,
+completed individual contribution records, the final recording and its hosted
+URL are still required. See the detailed
 [Phase I audit](docs/phase1_audit.md). A draft video does not replace the required
 team introductions.
 
@@ -48,7 +49,7 @@ Tectonic separately or compile the LaTeX report with a full TeX installation.
 | `make report` | Regenerates figures, measured tables, team fields, analysis, recording script and IEEE PDF; run simulation and synthesis first |
 | `make demo` | Generates the captioned 210-second rehearsal video from actual result files and figures |
 | `make check` | Runs simulation, synthesis, stress/netlist checks, report, video and package validation in order |
-| `make submission-check` | Strict readiness check; intentionally fails while team or final-video details are pending |
+| `make submission-check` | Strict readiness check; flags pending institution details, contribution evidence and final video/submission requirements |
 
 Generated waveforms, binaries and synthesized netlists are under `build/` and
 are not committed. Small measured CSV/JSON/log files, diagrams, PDF and draft
@@ -97,10 +98,18 @@ evidence; they are not exhaustive formal verification.
 
 ## Team and submission
 
-The original README listed Samarth, Tattva and three unnamed members. Update
-`team.json` with all five confirmed full names, roll numbers and institution
-details. Record completed individual contributions with actual commit evidence,
-then rebuild the report. Proposed roles are not completed contribution credits.
+| Team member | Enrollment number |
+| --- | --- |
+| Navprabhat Singh | 2401010293 |
+| Samarth Khera | 2401010407 |
+| Pratham Malhotra | 2401010343 |
+| Shivansh Tiwari | 2401020108 |
+| Tattva Rajput | 2401010478 |
+
+The confirmed roster is maintained in `team.json` and appears in the report and
+demo materials. Department, college and course details remain pending. Record
+completed individual contributions with actual commit evidence, then rebuild
+the report. Proposed roles are not completed contribution credits.
 
 The new implementation and deliverables were prepared with AI assistance.
 Each team member should review and understand their work, make a substantive

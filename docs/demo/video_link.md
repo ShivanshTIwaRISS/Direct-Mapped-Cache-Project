@@ -4,7 +4,8 @@ Final recording URL: **PENDING — record the team presentation and paste its vi
 
 The generated `phase1_prototype_draft.mp4` is a reproducible visual prototype
 walkthrough using actual RTL results. It is a rehearsal asset with on-screen
-captions, pending team identities, and no recorded team introductions. It is not
+captions, all five confirmed names and enrollment numbers, and no recorded team
+introductions. It is not
 the final team presentation. Generate it with `make demo`.
 
 Use [the five-speaker script](script.md) to record a presentation under five

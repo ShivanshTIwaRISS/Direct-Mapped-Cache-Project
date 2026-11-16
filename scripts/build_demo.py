@@ -40,7 +40,7 @@ def slide(title, lines=None, picture=None, footer="", highlight=None):
             ypos += 34
     for number, line in enumerate(textwrap.wrap(footer, 94)):
         draw.text((48, 620 + number * 27), line, font=font(23), fill=MUTED)
-    draw.text((48, 690), "Generated rehearsal walkthrough | Team recording and confirmed names pending",
+    draw.text((48, 690), "Generated rehearsal walkthrough | Team names confirmed; final recording pending",
               font=font(15), fill=MUTED)
     return canvas
 
@@ -62,10 +62,11 @@ def main():
         "32-bit byte addresses | aligned 32-bit reads", "",
         "Working RTL + self-checking simulation + generic synthesis",
     ], footer="This draft presents actual prototype results. The final submission must clearly introduce all five group members by name."), 12)
-    add(slide("Team introductions: complete before submission", [
-        f"{i + 1}. {member['name']}" for i, member in enumerate(team["members"])
-    ] + ["", "Clearly introduce the full names of all five group members."],
-        footer="Only Samarth and Tattva were listed in the starting README. Confirm full names and meaningful contribution records."), 22)
+    add(slide("Team members and enrollment numbers", [
+        f"{i + 1}. {member['name']}  |  {member['enrollment_number']}"
+        for i, member in enumerate(team["members"])
+    ] + ["", "Clearly introduce all five group members in the final recording."],
+        footer="All five names and enrollment numbers are confirmed. Record the final presentation with clear team introductions."), 22)
     add(slide("Addressing, storage and lookup", picture="docs/diagrams/architecture.png",
               footer="Tag = address[31:10]; index = address[9:4]; offset = address[3:0]. A hit requires valid AND matching tag."), 22)
     add(slide("Controller and atomic refill", picture="docs/diagrams/fsm.png",
@@ -113,7 +114,8 @@ def main():
     add(slide("Phase I progress and final team actions", [
         "Ready: RTL, verification, traces, AMAT and synthesis evidence.",
         "Ready: IEEE report, diagrams, demo script and this draft video.", "",
-        "Pending: confirmed names, roll numbers and college details.",
+        "Ready: all five names and enrollment numbers confirmed.",
+        "Pending: department, college and course details.",
         "Pending: each member's real contribution and Git history.",
         "Pending: team recording, accessible hosted URL, submission form.", "",
         "github.com/samarth-khera/Direct-Mapped-Cache-Project",

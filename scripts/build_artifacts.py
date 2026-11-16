@@ -165,7 +165,7 @@ def main():
             f"{100 * r['hit_ratio']:.2f} & {r['amat_cycles']:.4f} \\\\\n"
             for r in summary) + "}\n"
     )
-    names = r"\\ ".join(tex(m["name"]) + " (" + tex(m["roll_number"]) + ")"
+    names = r"\\ ".join(tex(m["name"]) + " (Enrollment No. " + tex(m["enrollment_number"]) + ")"
                          for m in team["members"])
     institution = tex(team["department"]) + r"\\" + tex(team["college"])
     (REPORT / "generated_team.tex").write_text(
@@ -173,7 +173,7 @@ def main():
         "\\newcommand{\\TeamInstitution}{" + institution + "}\n"
     )
     (REPORT / "generated_contributions.tex").write_text("\n\n".join(
-        r"\noindent\textbf{" + tex(m["name"]) + " (" + tex(m["roll_number"]) + r").} " +
+        r"\noindent\textbf{" + tex(m["name"]) + " (Enrollment No. " + tex(m["enrollment_number"]) + r").} " +
         tex(m["verified_contribution"]) + " Proposed responsibility: " + tex(m["proposed_role"]) + "."
         for m in team["members"]) + "\n")
     architecture(); fsm(); charts(summary); waveform()
@@ -236,20 +236,25 @@ is reported. The memory model and testbench are excluded from synthesis.
     members = team["members"]
     script = """# Five-speaker prototype video script (target 4:30, limit 5:00)
 
-Replace pending identities using `team.json` before recording. The rubric
-requires clearly naming all five members; it does not require five narrators.
+The confirmed names and enrollment numbers below come from `team.json`. The
+rubric requires clearly naming all five members; it does not require five narrators.
 This optional template assigns a speaking section to each member. Rehearse once.
 Show actual simulator execution as well as diagrams and results. The optional
 generated MP4 is a captioned rehearsal walkthrough, not a team recording.
 
 """
+    script += "| Team member | Enrollment number |\n| --- | --- |\n"
+    script += "".join(f"| {m['name']} | {m['enrollment_number']} |\n" for m in members)
+    script += "\nOpening introductions (keep enrollment numbers visible on the title card):\n\n"
+    script += "\n".join(f"- {m['name']} ({m['enrollment_number']}): Say, \"I am {m['name']}.\"" for m in members)
+    script += "\n\n"
     segments = [
         ("00:00–00:40", "Idea and team", "We are presenting Project 6, a Direct-Mapped Cache Controller. "
          "Our goal is to demonstrate how a small cache exploits temporal and spatial locality, "
          "and to measure hits, misses and average memory access time. "
          "Our Phase I prototype implements aligned reads using a 1 KiB cache, 16-byte blocks "
          "and 32-bit addresses. All five members now briefly introduce themselves.",
-         "Title slide; each member says: I am [full name], roll number [number]."),
+         "Title slide with all five confirmed names and enrollment numbers; use the introductions above."),
         ("00:40–01:25", "Addressing and storage", "The cache has 64 lines. Address bits 3 to 0 form "
          "the block offset, 9 to 4 select the index, and 31 to 10 are the tag. The upper two "
          "offset bits select one of four words. A hit requires both a valid entry and matching "
@@ -279,7 +284,8 @@ generated MP4 is a captioned rehearsal walkthrough, not a team recording.
          "Finish with the GitHub URL and final video link."),
     ]
     for member, (timing, title, words, screen) in zip(members, segments):
-        script += f"## {timing} — {member['name']}: {title}\n\n{words}\n\nOn screen: {screen}\n\n"
+        script += (f"## {timing} — {member['name']} ({member['enrollment_number']}): {title}\n\n"
+                   f"{words}\n\nOn screen: {screen}\n\n")
     script += """## Recording and submission
 
 1. Activate the environment with `source .tools/venv/bin/activate` if rebuilding figures.
@@ -288,7 +294,7 @@ generated MP4 is a captioned rehearsal walkthrough, not a team recording.
 4. Keep the export at or below 300 seconds; aim for 270 seconds.
 5. Upload the recording, verify viewer access, and replace the pending URL in
    `docs/demo/video_link.md`. Commit this change with the real contributor's identity.
-6. Rebuild the report after updating team details and contribution evidence.
+6. Rebuild the report after updating institution details and contribution evidence.
 7. Submit the existing GitHub repository URL through the instructor's form.
 """
     (ROOT / "docs/demo/script.md").write_text(script)

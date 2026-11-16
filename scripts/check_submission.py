@@ -99,11 +99,20 @@ def main():
     pending = []
     team = json.loads((ROOT / "team.json").read_text())
     require(len(team["members"]) == 5, "Exactly five member records required")
+    enrollments = [member["enrollment_number"] for member in team["members"]]
+    require(len(set(enrollments)) == 5 and all(re.fullmatch(r"\d{10}", value) for value in enrollments),
+            "Five unique 10-digit enrollment numbers are required")
+    for document in ("README.md", "docs/contributions.md", "docs/demo/script.md",
+                     "docs/report/generated_team.tex", "docs/report/generated_contributions.tex"):
+        content = (ROOT / document).read_text()
+        for member in team["members"]:
+            require(member["name"] in content and member["enrollment_number"] in content,
+                    f"Missing team member or enrollment number in {document}: {member['name']}")
     for i, member in enumerate(team["members"], 1):
-        if not member.get("confirmed") or "pending" in (member["name"] + member["roll_number"]).lower():
-            pending.append(f"Member {i}: confirmed full name and roll number")
+        if not member.get("confirmed") or "pending" in (member["name"] + member["enrollment_number"]).lower():
+            pending.append(f"{member['name']}: confirmed full name and enrollment number")
         if not member.get("contribution_commits"):
-            pending.append(f"Member {i}: completed contribution and real commit evidence")
+            pending.append(f"{member['name']}: completed contribution and real commit evidence")
         else:
             for commit in member["contribution_commits"]:
                 require(bool(re.fullmatch(r"[0-9a-f]{7,40}", commit)), "Invalid contribution commit")
@@ -126,6 +135,9 @@ def main():
     evidence = {"technical_package": "PASS", "regression_runs": 15, "workload_reads": 12324,
                 "stress_reads_per_design": 4096, "synthesized_outputs_match": True,
                 "draft_video_seconds": float(probe["format"]["duration"]),
+                "team_members": [{"name": m["name"], "enrollment_number": m["enrollment_number"]}
+                                 for m in team["members"]],
+                "team_details_confirmed": all(m.get("confirmed") for m in team["members"]),
                 "submission_ready": not pending, "pending": pending}
     (ROOT / "results/phase1_checks.json").write_text(json.dumps(evidence, indent=2) + "\n")
     # The hash manifest excludes itself and the check-status output.
