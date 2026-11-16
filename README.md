@@ -16,7 +16,7 @@ team introductions.
 | --- | --- |
 | IEEE report: abstract, literature review, proposed solution, contributions, references | [PDF](docs/report/phase1_report.pdf) · [editable LaTeX](docs/report/phase1_report.tex) |
 | Prototype and block diagrams | [Cache RTL](rtl/) · [FSM](cache_fsm.v) · [decoder](addr_decoder.v) · [architecture](docs/architecture.md) |
-| Prototype video, maximum five minutes | [3:30 draft MP4](docs/demo/phase1_prototype_draft.mp4) · [4:30 five-speaker script](docs/demo/script.md) · [final video link: pending](docs/demo/video_link.md) |
+| Prototype video, maximum five minutes | [3:30 draft MP4](docs/demo/phase1_prototype_draft.mp4) · [final video link: pending](docs/demo/video_link.md) |
 | Trace, hit/miss report and AMAT | [Traces](traces/) · [measured results](results/summary.csv) · [analysis](docs/results_analysis.md) |
 | Synthesis evidence | [Log](results/synthesis.log) · [generic cell statistics](results/synthesis_cells.json) |
 | Individual contributions | [Evidence and proposed responsibilities](docs/contributions.md) · [editable team details](team.json) |
@@ -46,7 +46,7 @@ Tectonic separately or compile the LaTeX report with a full TeX installation.
 | `make sim` | 15 actual RTL runs, an independent oracle, exact counters and per-access latency; also emits a VCD |
 | `make synth` | Synthesizes the cache only; structural checks and generic cell statistics |
 | `make deepcheck` | After synthesis, runs 4,096 high-address stress accesses on RTL and the synthesized netlist and compares every output |
-| `make report` | Regenerates figures, measured tables, team fields, analysis, recording script and IEEE PDF; run simulation and synthesis first |
+| `make report` | Regenerates figures, measured tables, team fields, analysis and IEEE PDF; run simulation and synthesis first |
 | `make demo` | Generates the captioned 210-second rehearsal video from actual result files and figures |
 | `make check` | Runs simulation, synthesis, stress/netlist checks, report, video and package validation in order |
 | `make submission-check` | Strict readiness check; flags pending course details, contribution evidence and final video/submission requirements |
@@ -121,8 +121,8 @@ Each team member should review and understand their work, make a substantive
 contribution, and commit it using their own Git identity. Preserve genuine
 history; do not manufacture five-author contributions.
 
-Record the [five-speaker script](docs/demo/script.md), keep the video under
-five minutes, host it with evaluator access and update
+Record the prototype presentation with all five group members introduced by
+name, keep the video under five minutes, host it with evaluator access and update
 [the final link](docs/demo/video_link.md). Run `make submission-check`, review
 the [audit checklist](docs/phase1_audit.md), then submit this repository URL:
 
