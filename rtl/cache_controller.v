@@ -72,44 +72,44 @@ module cache_controller (
 
     // Address decomposition into Tag, Index, and Block Offset
     addr_decoder decoder (
-        saved_addr,
-        tag,
-        index,
-        offset
+        .address (saved_addr),
+        .tag     (tag),
+        .index   (index),
+        .offset  (offset)
     );
 
     // Tag, Valid, and Data Storage Arrays
     tag_ram tags (
-        clk,
-        refill_en,
-        index,
-        tag,
-        stored_tag
+        .clk       (clk),
+        .write_en  (refill_en),
+        .index     (index),
+        .write_tag (tag),
+        .read_tag  (stored_tag)
     );
 
     valid_bit_ram valids (
-        clk,
-        reset,
-        refill_en,
-        index,
-        valid
+        .clk      (clk),
+        .reset    (reset),
+        .write_en (refill_en),
+        .index    (index),
+        .valid    (valid)
     );
 
     cache_data_ram data (
-        clk,
-        refill_en,
-        index,
-        mem_rdata,
-        offset[3:2],
-        cached_word
+        .clk         (clk),
+        .write_en    (refill_en),
+        .index       (index),
+        .write_data  (mem_rdata),
+        .word_offset (offset[3:2]),
+        .read_data   (cached_word)
     );
 
     // Combinational Hit/Miss Detection
     tag_comparator comparator (
-        valid,
-        stored_tag,
-        tag,
-        hit
+        .valid         (valid),
+        .stored_tag    (stored_tag),
+        .requested_tag (tag),
+        .hit           (hit)
     );
 
     // 4-State Cache Control FSM
@@ -155,10 +155,10 @@ module cache_controller (
                 if (misaligned) begin
                     resp_data <= 0;
                 end else if (hit) begin
-                    hit_count <= hit_count + 1'b1;
+                    hit_count <= hit_count + 32'd1;
                     resp_data <= cached_word;
                 end else begin
-                    miss_count <= miss_count + 1'b1;
+                    miss_count <= miss_count + 32'd1;
                 end
             end
 
