@@ -1,4 +1,16 @@
+# Project 6: Direct-Mapped Cache Controller
 
+A working Phase I Verilog prototype for a **1 KiB direct-mapped read cache**,
+with 16-byte lines, 32-bit byte addresses, atomic refill and independently
+checked hit/miss statistics. This continues Samarth Khera's original decoder and FSM
+commit without rewriting its history.
+
+**Submission status:** the technical package is implemented and verified.
+All five names, enrollment numbers, department and university are confirmed below. Course details,
+completed individual contribution records, the final recording and its hosted
+URL are still required. See the detailed
+[Phase I audit](docs/phase1_audit.md). A draft video does not replace the required
+team introductions.
 
 | Phase I requirement | Deliverable |
 | --- | --- |
