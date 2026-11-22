@@ -31,7 +31,7 @@ On macOS with Homebrew:
 
 ```sh
 brew install icarus-verilog yosys tectonic ffmpeg
-python3 -m venv .tools/venv
+python3 -m venv .tools/venv  
 .tools/venv/bin/python -m pip install -r requirements.txt
 make check
 ```
