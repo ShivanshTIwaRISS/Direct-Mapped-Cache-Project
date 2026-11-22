@@ -52,7 +52,7 @@
   "rtl/valid_bit_ram.v": "551abefd2c3985abd6dc3df149b3d4bd0f7b4258bf45eb3e4f1eb4d39b761486",
   "scripts/build_artifacts.py": "98461fcdc4ec02def026f5ccd9711529f56768ad0d84b0b4814d89840f87d5a7",
   "scripts/build_demo.py": "64b75ae63be453206a1856f8ce9de6a31e23a446e18079634b718f1fcece2989",
-  "scripts/check_submission.py": "bb6d40984ec688723d59d8c9175d017efc4744b66afbb1d023b98100877a82f2",
+  "scripts/check_submission.py": "3b24b4518d75864269f510f38e30b345c7c87c7b325af7ae7ce61146557171ed",
   "scripts/deep_check.py": "75ee54076ebc2a76e77174b3b29f46fa0f3a22417558b3724f602406bad8aeed",
   "scripts/generate_traces.py": "333b17257c846b3a832fb7fac187f32050ba7114651dc1e307c7fc3868d1d4fb",
   "scripts/run_sim.py": "e79c3011f25ea1326a98034e9781d302f9f3396748a9fe5fed9cad2df3444968",
