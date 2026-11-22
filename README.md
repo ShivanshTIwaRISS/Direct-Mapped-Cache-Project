@@ -73,6 +73,76 @@ counter semantics. The baseline supports aligned reads. Write policies, a CPU
 core, AXI/DRAM integration and an FPGA board demonstration are future work.
 The memory endpoint is a deterministic simulation model, not physical DRAM.
 
+
+## Understanding Cache Address Mapping
+
+A direct-mapped cache uses specific address bits to determine
+where a memory block can be stored. In this implementation,
+a 32-bit memory address is divided into three fields:
+
+| Address Field | Bit Range | Purpose |
+|---|---|---|
+| Tag | [31:10] | Identifies the memory block |
+| Index | [9:4] | Selects one of the 64 cache lines |
+| Offset | [3:0] | Selects a byte within a 16-byte block |
+
+### Address Mapping Example
+
+Consider two memory addresses:
+
+- Address A: `0x00000024`
+- Address B: `0x00000424`
+
+Their address fields are:
+
+| Field | Address A | Address B |
+|---|---|---|
+| Tag | `0x000000` | `0x000001` |
+| Index | `0x02` | `0x02` |
+| Byte Offset | `0x4` | `0x4` |
+
+Although these addresses belong to different memory blocks,
+both map to cache line 2.
+
+This happens because a direct-mapped cache allows only one
+memory block to occupy a particular cache index at a time.
+
+### Understanding Conflict Misses
+
+Assuming the cache is initially empty, consider this
+sequence of memory accesses:
+
+| Access | Address | Cache Result |
+|---|---|---|
+| 1 | `0x00000024` | Miss |
+| 2 | `0x00000024` | Hit |
+| 3 | `0x00000424` | Miss |
+| 4 | `0x00000024` | Miss |
+
+The first access loads Address A into cache line 2.
+The second access is a hit because the block is already present.
+
+When Address B is accessed, it maps to the same cache line
+but has a different tag. The previously stored block is
+therefore replaced.
+
+Revisiting Address A produces another miss because its
+cache entry has been evicted.
+
+### Key Observation
+
+This example demonstrates an important limitation of
+direct-mapped caches: two frequently accessed memory blocks
+can continuously replace one another if they map to the
+same cache index.
+
+Increasing cache associativity can reduce such conflict
+misses by allowing multiple blocks to occupy the same set.
+
+Understanding this behavior is essential when evaluating
+cache hit rates, miss penalties and Average Memory Access
+Time (AMAT).
+
 ## Measured results
 
 Each main workload starts cold and contains 1,024 reads. The random trace uses
