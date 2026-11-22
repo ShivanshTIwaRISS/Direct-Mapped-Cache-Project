@@ -1,4 +1,4 @@
-.PHONY: all traces sim synth report demo deepcheck check submission-check
+.PHONY: all traces sim synth report demo deepcheck check submission-check stress-dv
 PYTHON ?= $(if $(wildcard .tools/venv/bin/python),.tools/venv/bin/python,python3)
 all: sim synth report
 
@@ -27,3 +27,10 @@ check: sim synth deepcheck report demo
 
 submission-check:
 	$(PYTHON) scripts/check_submission.py --strict
+
+stress-dv:
+	@mkdir -p build
+	iverilog -g2012 -Wall -Wno-timescale -s protocol_stress_tb -o build/protocol_stress_tb \
+		addr_decoder.v cache_fsm.v rtl/cache_controller.v rtl/cache_data_ram.v \
+		rtl/tag_ram.v rtl/valid_bit_ram.v rtl/tag_comparator.v tb/protocol_stress_tb.sv
+	vvp build/protocol_stress_tb
