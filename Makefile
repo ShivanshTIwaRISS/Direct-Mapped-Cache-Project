@@ -1,6 +1,6 @@
-.PHONY: all traces sim synth report demo deepcheck check submission-check stress-dv telemetry
+.PHONY: all traces sim synth waveform report demo deepcheck check submission-check stress-dv telemetry
 PYTHON ?= $(if $(wildcard .tools/venv/bin/python),.tools/venv/bin/python,python3)
-all: sim synth report
+all: sim synth waveform report
 
 traces:
 	$(PYTHON) scripts/generate_traces.py
@@ -11,6 +11,9 @@ sim:
 synth:
 	@mkdir -p build results
 	yosys -q -Q -T -l results/synthesis.log scripts/synthesize.ys
+
+waveform:
+	$(PYTHON) scripts/build_artifacts.py --waveform
 
 report:
 	$(PYTHON) scripts/build_artifacts.py

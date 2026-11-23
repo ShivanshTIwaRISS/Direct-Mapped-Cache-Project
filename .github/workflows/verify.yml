@@ -1,5 +1,8 @@
 name: Verify cache prototype
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 jobs:
   rtl-and-synthesis:
     runs-on: ubuntu-latest
@@ -10,8 +13,18 @@ jobs:
           python-version: '3.12'
       - name: Install RTL tools
         run: sudo apt-get update && sudo apt-get install -y iverilog yosys
+      - name: Install Python figure dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
       - name: Simulate and compare with reference model
         run: make sim
+      - name: Update waveform diagrams from simulated VCD
+        run: |
+          make waveform
+          {
+            echo "### Waveform Artifacts Updated"
+            echo "- Source VCD: \`build/cache_demo.vcd\`"
+            ls -lh docs/diagrams/waveform.png docs/diagrams/waveform.pdf docs/diagrams/waveform.svg
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Generic synthesis and structural check
         run: make synth
       - name: Full-address stress and synthesized-netlist regression
@@ -20,7 +33,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: phase1-rtl-evidence
+          if-no-files-found: error
           path: |
             results/
             build/cache_demo.vcd
             build/cache_netlist.json
+            docs/diagrams/waveform.png
+            docs/diagrams/waveform.pdf
+            docs/diagrams/waveform.svg

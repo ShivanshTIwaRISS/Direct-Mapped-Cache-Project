@@ -3,6 +3,7 @@
 import csv
 import json
 import os
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -148,6 +149,11 @@ def waveform():
 
 
 def main():
+    if "--waveform" in sys.argv[1:]:
+        FIGURES.mkdir(parents=True, exist_ok=True)
+        waveform()
+        print("Generated waveform figures from build/cache_demo.vcd.")
+        return
     FIGURES.mkdir(parents=True, exist_ok=True); REPORT.mkdir(parents=True, exist_ok=True)
     summary = json.loads((ROOT / "results/summary.json").read_text())
     synthesis = json.loads((ROOT / "results/synthesis_cells.json").read_text())
