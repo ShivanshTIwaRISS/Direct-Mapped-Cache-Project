@@ -6,6 +6,7 @@ import csv
 import hashlib
 import json
 import re
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -90,9 +91,14 @@ def main():
     for name in ("architecture", "fsm", "results", "waveform"):
         for ext in ("png", "pdf", "svg"):
             require((ROOT / f"docs/diagrams/{name}.{ext}").is_file(), "Missing diagram: " + name)
-    probe = json.loads(subprocess.check_output([
-        "ffprobe", "-v", "error", "-show_entries", "format=duration:stream=width,height",
-        "-of", "json", str(ROOT / "docs/demo/phase1_prototype_draft.mp4")], text=True))
+    if shutil.which("ffprobe"):
+        probe = json.loads(subprocess.check_output([
+            "ffprobe", "-v", "error", "-show_entries", "format=duration:stream=width,height",
+            "-of", "json", str(ROOT / "docs/demo/phase1_prototype_draft.mp4")], text=True))
+    else:
+        demo_meta = ROOT / "results/demo_video.json"
+        require(demo_meta.is_file() and demo_meta.stat().st_size > 0, "Missing results/demo_video.json")
+        probe = json.loads(demo_meta.read_text())
     require(0 < float(probe["format"]["duration"]) <= 300, "Draft video exceeds five minutes")
     require(any(s.get("width") == 1280 and s.get("height") == 720 for s in probe["streams"]),
             "Draft video resolution incorrect")

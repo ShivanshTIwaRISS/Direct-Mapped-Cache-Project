@@ -67,7 +67,7 @@ module main_memory_model #(
         end else if (active) begin
             if (mem_ready && mem_read) begin
                 active            <= 0;
-                transaction_count <= transaction_count + 1'b1;
+                transaction_count <= transaction_count + 32'd1;
             end else if (remaining > 0) begin
                 remaining <= remaining - 1;
             end
